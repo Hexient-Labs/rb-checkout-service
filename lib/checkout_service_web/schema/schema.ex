@@ -11,29 +11,3 @@ defmodule CheckoutServiceWeb.Schema do
   end
 
 end
-
-"""
-  enum OrderStatus {
-  CANCELLED
-  COMPLETE
-  NEW
-}
-
-type Order {
-id: ID!
-status:  OrderStatus!
-         }
-
-         input CreateOrderInput {
-         stripeCardToken: String!
-         }
-
-
-type Query {
-ordersForCurrentCustomer: [Orders!]!
-}
-
-type Mutation {
-createOrder(inputs: CreateOrderInput!): Order!
-}
-"""
